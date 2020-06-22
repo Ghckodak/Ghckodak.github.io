@@ -1,6 +1,6 @@
 @supports (backdrop-filter: blur(20px)) {
   .blur {
-    background: rgba(255,255,255,0.9) !important;
+    background: rgba(255,255,255,0.65) !important;
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: 'Microsoft YaHei';
-  src: url("https://cdn.jsdelivr.net/gh/ghckodak/blogcdn@1.2/fonts/Lato/Lato-Regular.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/ghckodak/blogcdn@1.4/fonts/PingFang-SC-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
@@ -1577,7 +1577,7 @@ pre {
   width: 100%;
   margin: 0.5rem 0;
   display: block;
-  background: #f6f6f6;
+  background: rgba(246,246,246,0.6);
   font-size: 0.8125rem;
   font-family: Menlo, Monaco, monospace, courier, sans-serif;
   border-radius: 4px;
@@ -3097,7 +3097,7 @@ article .readmore >a {
   -webkit-appearance: none;
   padding-left: 36px;
   border-radius: 1.4rem;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.3);
   backdrop-filter: blur(10px);
   border: none;
   color: #555;
@@ -3111,7 +3111,7 @@ article .readmore >a {
   background: rgba(255,255,255,0.8);
 }
 .cover-wrapper .cover .cover-body .m_search .input:focus {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
 }
 .cover-wrapper .cover .cover-body .menu {
   margin-top: 16px;
@@ -4022,7 +4022,7 @@ div.hoverbox:hover >div.target {
   line-height: 1.3;
   width: 100%;
   color: #555;
-  background: #fafafa;
+  background: rgba(255,255,255,0.5);
   box-shadow: none;
   box-sizing: border-box;
   padding-left: 36px;
@@ -4096,7 +4096,7 @@ ul.list-v {
   z-index: 1;
   display: none;
   position: absolute;
-  background: #fff;
+  background: rgba(255,255,255,0.75);
   box-shadow: 0 0 1px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1);
   margin-top: -6px;
   border-radius: 4px;
