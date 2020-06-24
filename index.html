@@ -449,9 +449,120 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box blur reveal ">
+  
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h2 class="title">
+    <a href="/2020/06/23/working-with-google-search-console/">
+      创建sitemap站点地图并向Google站长工具提交
+    </a>
+  </h2>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://ghckodak.github.io" rel="nofollow">
+    <img src="https://s1.ax1x.com/2020/06/17/NEkCNV.jpg">
+    <p>Alex Gu</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/website/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>website</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月23日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天把谷歌统计集成在网站里了，今天无意间发现还有一个谷歌站长工具。在上面提交网站后网站就能被谷歌抓取，从而搜索出来。</p>
+<h2 id="何为sitemap"><a href="#何为sitemap" class="headerlink" title="何为sitemap?"></a>何为sitemap?</h2><p>Sitemap 可方便网站管理员通知搜索引擎他们网站上有哪些可供抓取的网页。最简单的 Sitemap 形式，就是XML 文件，在其中列出网站中的网址以及关于每个网址的其他元数据（上次更新的时间、更改的频率以及相对于网站上其他网址的重要程度为何等），以便搜索引擎可以更加智能地抓取网站。</p>
+<blockquote>
+<p>来源：<a href="https://baike.baidu.com/item/sitemap/6241567?fr=aladdin#3_1" target="_blank" rel="noopener">百度百科</a></p>
+</blockquote>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>首先肯定是生成sitemap的xml文件了。</p>
+<ul>
+<li>在博客根目录下安装插件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在博客根目录下的<code>_config.yml</code>里添加如下代码：</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Plugins:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-sitemap</span></span><br><span class="line"></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>然后打包提交即可。</p>
+
+      
+    </div>
+    
+      
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -856,6 +967,11 @@
             id="categoriesphotography"
             ><div class='name'>photography</div><div class='badge'>(1)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/website/" href="/categories/website/"
+            id="categorieswebsite"
+            ><div class='name'>website</div><div class='badge'>(1)</div></a></li>
+        
       </ul>
     </div>
   </section>
@@ -878,7 +994,7 @@
 
 
     <div class='content'>
-      <a href="/tags/markdown-note-test/" style="font-size: 14px; color: #999">markdown, note, test</a> <a href="/tags/photography/" style="font-size: 14px; color: #999">photography</a>
+      <a href="/tags/markdown-note-test/" style="font-size: 14px; color: #999">markdown, note, test</a> <a href="/tags/photography/" style="font-size: 14px; color: #999">photography</a> <a href="/tags/sitemap-google-search-console/" style="font-size: 14px; color: #999">sitemap, google search console</a>
     </div>
   </section>
 

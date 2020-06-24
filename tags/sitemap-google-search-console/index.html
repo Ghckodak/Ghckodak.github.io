@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>归档：2018/3 - Alex Gu&#39;s Blog</title>
+    <title>标签：sitemap, google search console - Alex Gu&#39;s Blog</title>
   
   
 
@@ -99,39 +99,7 @@
 
 <body>
   
-  <div class="cover-wrapper">
-    
-      <cover class='cover  half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-    
-      <p class="title">Alex Gu</p>
-    
-    
-      <p class="subtitle">虽不能至，心向往之</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      </cover>
-    
-    <div id="loading-bar-wrapper">
+  <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
 <header class="l_header blur">
@@ -427,16 +395,17 @@
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper'>
       
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list ">
     
       
@@ -461,8 +430,8 @@
         
           
   <h2 class="title">
-    <a href="/2018/03/21/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%A5%BD%E7%9A%84%E6%91%84%E5%BD%B1%E5%99%A8%E6%9D%90%E5%90%97/">
-      Do we need expensive, professional equipment for photograph?
+    <a href="/2020/06/23/working-with-google-search-console/">
+      创建sitemap站点地图并向Google站长工具提交
     </a>
   </h2>
 
@@ -487,9 +456,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/photography/' rel="nofollow">
+    <a href='/categories/website/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>photography</p>
+      <p>website</p>
     </a>
   </div>
 
@@ -500,7 +469,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2018年3月21日</p>
+    <p>发布于：2020年6月23日</p>
   </a>
 </div>
 
@@ -528,16 +497,26 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Many photograph lovers buy lots of professional equipment’s and spend lots of money on it. However, some photographers take fantastic photos only with old shooting camera. There is an argument of whether it is necessary to buy expensive equipment’s for photograph. My opinion is, we don’t need.</p>
+        <p>昨天把谷歌统计集成在网站里了，今天无意间发现还有一个谷歌站长工具。在上面提交网站后网站就能被谷歌抓取，从而搜索出来。</p>
+<h2 id="何为sitemap"><a href="#何为sitemap" class="headerlink" title="何为sitemap?"></a>何为sitemap?</h2><p>Sitemap 可方便网站管理员通知搜索引擎他们网站上有哪些可供抓取的网页。最简单的 Sitemap 形式，就是XML 文件，在其中列出网站中的网址以及关于每个网址的其他元数据（上次更新的时间、更改的频率以及相对于网站上其他网址的重要程度为何等），以便搜索引擎可以更加智能地抓取网站。</p>
+<blockquote>
+<p>来源：<a href="https://baike.baidu.com/item/sitemap/6241567?fr=aladdin#3_1" target="_blank" rel="noopener">百度百科</a></p>
+</blockquote>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>首先肯定是生成sitemap的xml文件了。</p>
+<ul>
+<li>在博客根目录下安装插件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在博客根目录下的<code>_config.yml</code>里添加如下代码：</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Plugins:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-sitemap</span></span><br><span class="line"></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>然后打包提交即可。</p>
+
       
     </div>
     
-      
-        <div class="button readmore">
-          <a href="/2018/03/21/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%A5%BD%E7%9A%84%E6%91%84%E5%BD%B1%E5%99%A8%E6%9D%90%E5%90%97/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
       
     
   </section>
@@ -557,7 +536,8 @@
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -798,14 +778,6 @@
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       <script>setLoadingBarProgress(60);</script>
