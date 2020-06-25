@@ -533,7 +533,7 @@ div.btns a {
   flex-direction: column;
   padding: 8px;
   text-align: center;
-  background: #f6f6f6;
+  background: rgba(246,246,246,0.5);
   border-radius: 4px;
 }
 div.btns a>img:first-child,
