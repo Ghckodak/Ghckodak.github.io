@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>Category: photography - Alex Gu&#39;s Blog</title>
+    <title>LidarSystem - Alex Gu&#39;s Blog</title>
   
+    <meta name="keywords" content="Lidar, Pyhton, C">
+  
+  
+    <meta name="description" content="A Pyhton &amp; C Project">
   
 
   <!-- feed -->
@@ -404,25 +406,12 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      
-  <section class="post-list ">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
+
   
+    <article id="post" class="post white-box reveal blur article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -432,11 +421,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2018/03/21/do_we_need_good_photography_equipment/">
-      Do we need expensive, professional equipment for photograph?
+  <h1 class="title">
+    <a href="/2020/07/14/LidarSystem/">
+      LidarSystem
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -459,9 +448,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/photography/' rel="nofollow">
+    <a href='/categories/Project/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>photography</p>
+      <p>Project</p>
     </a>
   </div>
 
@@ -472,14 +461,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Mar 21, 2018</p>
+    <p>发布于：Jul 14, 2020</p>
   </a>
 </div>
-
-            
-          
-            
-              
 
             
           
@@ -497,40 +481,303 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Many photograph lovers buy lots of professional equipment’s and spend lots of money on it. However, some photographers take fantastic photos only with old shooting camera. There is an argument of whether it is necessary to buy expensive equipment’s for photograph. My opinion is, we don’t need.</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2018/03/21/do_we_need_good_photography_equipment/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>A Pyhton &amp; C Project</p>
+<a id="more"></a>
 
-          </div>
+<h2 id="Device-Overview"><a href="#Device-Overview" class="headerlink" title="Device Overview"></a>Device Overview</h2><p>The Time of Flight sensor is the core part of this system, it collects the distance data by taking a 360 degree measurement. The ToF is assembled on the slip ring which allows the ToF rotating freely. A stepper motor is used to drive the slip ring by gears. An external LED is used for status indication and a push button is used to start the measurement.<br>By pushing the button, the stepper motor will automatically drive the ToF, after taking a 360 degree measurement, it will stop and a 3D visualized graph will pop up on the PC.</p>
+<img src="https://s1.ax1x.com/2020/07/15/Ua7kin.png" width = "300" height = "200" alt="Block Diagram" align=center />
+
+<h2 id="Key-parts-of-the-application"><a href="#Key-parts-of-the-application" class="headerlink" title="Key parts of the application"></a>Key parts of the application</h2><ul>
+<li>ToF module: ST VL53L1X with 940 nm invisible laser</li>
+<li>Microcontroller: Texas Instruments SimpleLink™ Ethernet MSP432E401Y MCU Launchpad™</li>
+<li>Stepper motor: 28BYJ-48</li>
+<li>Stepper motor driver board: ULN2003</li>
+<li>Python 3.6.8 with pyserial and Open3D library</li>
+</ul>
+<h2 id="Device-Characteristics-Table"><a href="#Device-Characteristics-Table" class="headerlink" title="Device Characteristics Table"></a>Device Characteristics Table</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Operating voltage</td>
+<td>5.0V</td>
+</tr>
+<tr>
+<td>Max ranging distance</td>
+<td>400mm</td>
+</tr>
+<tr>
+<td>Operating Temperature</td>
+<td>-20°C ~ 85°C</td>
+</tr>
+<tr>
+<td>Avg time needed for a single measurement</td>
+<td>21s</td>
+</tr>
+<tr>
+<td>Total measurement points</td>
+<td>296</td>
+</tr>
+<tr>
+<td>Bus speed</td>
+<td>24MHz</td>
+</tr>
+<tr>
+<td>Baud rate</td>
+<td>115200</td>
+</tr>
+<tr>
+<td>Max ranging frequency</td>
+<td>50Hz</td>
+</tr>
+<tr>
+<td>ADC sampling ratey</td>
+<td>48Hz</td>
+</tr>
+</tbody></table>
+<h2 id="Detailed-Description"><a href="#Detailed-Description" class="headerlink" title="Detailed Description"></a>Detailed Description</h2><p>A 3D time-of-flight (TOF) camera works by illuminating the scene with a modulated light source,and observing the reflected light (Figure 1). The phase shift between the illumination and the reflection is measured and translated to distance. For VL53L1X, it measures the absolute distance by using the formula Δd = v*t.</p>
+<p>The farthest distance it can measure is around 400mm as it may be affected by ambient light. The VL53L1X can be configured and its distance data can be obtained through I²C bus the SCL and SDA lines on the ToF allows the I²C to communicate with MSP432E401Y microcontroller. To construct a point cloud system, a stepper motor will drive the ToF to do a full cycle rotation to gather the distance data, and those data will be stored in A/D, processed to coordinates and sent to a PC for visualization. To convert distance into coordinates, the current angle will be calculated first and use trigonometric to get the related coordinates. Define current angle (α), current step (n), total step (m), distance (d). X component (x) and Y component (y) can be calculated by:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">α&#x3D;n&#x2F;m*2*pi</span><br><span class="line"></span><br><span class="line">x&#x3D;d*sin(α)</span><br><span class="line"></span><br><span class="line">y&#x3D;d*cos(α)</span><br></pre></td></tr></table></figure>
+<p>For example, if the current step is 256, total step is 512, distance measured is 200.00mm. Then,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">α&#x3D;256&#x2F;512*2*pi&#x3D;pi</span><br><span class="line"></span><br><span class="line">x&#x3D;200.00*sin(pi)&#x3D;0</span><br><span class="line"></span><br><span class="line">y&#x3D;200.00*cos(pi)&#x3D;-200.00</span><br></pre></td></tr></table></figure>
+<p>So the X component is 0 and the Y component is -200.00mm.</p>
+<img src="https://s1.ax1x.com/2020/07/15/Ua76Qf.png" width = "300" height = "200" alt="" align=center />
+
+<h2 id="Circuit-Schematic"><a href="#Circuit-Schematic" class="headerlink" title="Circuit Schematic"></a>Circuit Schematic</h2><p><img src="https://s1.ax1x.com/2020/07/15/Ua7Reg.md.png" alt=""></p>
+<h2 id="Logic-Flowchart"><a href="#Logic-Flowchart" class="headerlink" title="Logic Flowchart"></a>Logic Flowchart</h2><ul>
+<li><p>Microcontroller<br><img src="https://s1.ax1x.com/2020/07/15/Ua7WwQ.md.jpg" alt=""></p>
+</li>
+<li><p>Python</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/15/Ua7foj.md.jpg" alt=""></p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=http://ghckodak.github.io/2020/07/14/LidarSystem/>http://ghckodak.github.io/2020/07/14/LidarSystem/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://s1.ax1x.com/2020/07/14/UNA5y4.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://s1.ax1x.com/2020/07/14/UNALY6.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-14T17:09:21-04:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 14, 2020</p>
+  </a>
+</div>
+
         
       
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Lidar-Pyhton-C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Lidar, Pyhton, C</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://ghckodak.github.io/2020/07/14/LidarSystem/&title=LidarSystem - Alex Gu's Blog&summary=A Pyhton &amp; C Project"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://ghckodak.github.io/2020/07/14/LidarSystem/&title=LidarSystem - Alex Gu's Blog&summary=A Pyhton &amp; C Project"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://ghckodak.github.io/2020/07/14/LidarSystem/&title=LidarSystem - Alex Gu's Blog&summary=A Pyhton &amp; C Project"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
   </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/06/23/working-with-google-search-console/'>
+                <p class='title'>创建sitemap站点地图并向Google站长工具提交<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>昨天把谷歌统计集成在网站里了，今天无意间发现还有一个谷歌站长工具。在上面提交网站后网站就能被谷歌抓取，从而搜索出来。
+
+
+何为sitemap?Sitemap 可方便网站管理员通知搜索引擎他们网站...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
   
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
 
   
 
 
-    
-  
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'LidarSystem',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class='l_side'>
@@ -609,70 +856,26 @@
   
 
   
-    
-    
-  
 
-  <section class="widget category blur desktop">
+  
+    
+    
+
+
+  <section class="widget toc-wrapper blur desktop mobile">
     
   <header>
     
-      <a href='categories/'><i class="iconfont icon-fenlei fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Project/" href="/categories/Project/"
-            id="categoriesProject"
-            ><div class='name'>Project</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/code/" href="/categories/code/"
-            id="categoriescode"
-            ><div class='name'>code</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/photography/" href="/categories/photography/"
-            id="categoriesphotography"
-            ><div class='name'>photography</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/website/" href="/categories/website/"
-            id="categorieswebsite"
-            ><div class='name'>website</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Device-Overview"><span class="toc-text">Device Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-parts-of-the-application"><span class="toc-text">Key parts of the application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Device-Characteristics-Table"><span class="toc-text">Device Characteristics Table</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Detailed-Description"><span class="toc-text">Detailed Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Circuit-Schematic"><span class="toc-text">Circuit Schematic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logic-Flowchart"><span class="toc-text">Logic Flowchart</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud blur desktop mobile">
-    
-  <header>
-    
-      <a href='tags/'><i class="iconfont icon-Tag fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Lidar-Pyhton-C/" style="font-size: 14px; color: #999">Lidar, Pyhton, C</a> <a href="/tags/markdown-note-test/" style="font-size: 14px; color: #999">markdown, note, test</a> <a href="/tags/photography/" style="font-size: 14px; color: #999">photography</a> <a href="/tags/sitemap-google-search-console/" style="font-size: 14px; color: #999">sitemap, google search console</a>
-    </div>
-  </section>
-
-
-  
 
   
 
@@ -867,6 +1070,60 @@
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "cPgSD9MrYkIMgSPYU9u0iEJQ-gzGzoHsz",
+    appKey: "SmMk70JsDaFAqo6D1cMPYWEi",
+    placeholder: "写点什么...",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
 
 
 

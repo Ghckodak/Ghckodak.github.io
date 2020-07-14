@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LidarSystem</title>
+      <link href="/2020/07/14/LidarSystem/"/>
+      <url>/2020/07/14/LidarSystem/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>A Pyhton &amp; C Project</p><a id="more"></a><h2 id="Device-Overview"><a href="#Device-Overview" class="headerlink" title="Device Overview"></a>Device Overview</h2><p>The Time of Flight sensor is the core part of this system, it collects the distance data by taking a 360 degree measurement. The ToF is assembled on the slip ring which allows the ToF rotating freely. A stepper motor is used to drive the slip ring by gears. An external LED is used for status indication and a push button is used to start the measurement.<br>By pushing the button, the stepper motor will automatically drive the ToF, after taking a 360 degree measurement, it will stop and a 3D visualized graph will pop up on the PC.</p><img src="https://s1.ax1x.com/2020/07/15/Ua7kin.png" width = "300" height = "200" alt="Block Diagram" align=center /><h2 id="Key-parts-of-the-application"><a href="#Key-parts-of-the-application" class="headerlink" title="Key parts of the application"></a>Key parts of the application</h2><ul><li>ToF module: ST VL53L1X with 940 nm invisible laser</li><li>Microcontroller: Texas Instruments SimpleLink™ Ethernet MSP432E401Y MCU Launchpad™</li><li>Stepper motor: 28BYJ-48</li><li>Stepper motor driver board: ULN2003</li><li>Python 3.6.8 with pyserial and Open3D library</li></ul><h2 id="Device-Characteristics-Table"><a href="#Device-Characteristics-Table" class="headerlink" title="Device Characteristics Table"></a>Device Characteristics Table</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Operating voltage</td><td>5.0V</td></tr><tr><td>Max ranging distance</td><td>400mm</td></tr><tr><td>Operating Temperature</td><td>-20°C ~ 85°C</td></tr><tr><td>Avg time needed for a single measurement</td><td>21s</td></tr><tr><td>Total measurement points</td><td>296</td></tr><tr><td>Bus speed</td><td>24MHz</td></tr><tr><td>Baud rate</td><td>115200</td></tr><tr><td>Max ranging frequency</td><td>50Hz</td></tr><tr><td>ADC sampling ratey</td><td>48Hz</td></tr></tbody></table><h2 id="Detailed-Description"><a href="#Detailed-Description" class="headerlink" title="Detailed Description"></a>Detailed Description</h2><p>A 3D time-of-flight (TOF) camera works by illuminating the scene with a modulated light source,and observing the reflected light (Figure 1). The phase shift between the illumination and the reflection is measured and translated to distance. For VL53L1X, it measures the absolute distance by using the formula Δd = v*t.</p><p>The farthest distance it can measure is around 400mm as it may be affected by ambient light. The VL53L1X can be configured and its distance data can be obtained through I²C bus the SCL and SDA lines on the ToF allows the I²C to communicate with MSP432E401Y microcontroller. To construct a point cloud system, a stepper motor will drive the ToF to do a full cycle rotation to gather the distance data, and those data will be stored in A/D, processed to coordinates and sent to a PC for visualization. To convert distance into coordinates, the current angle will be calculated first and use trigonometric to get the related coordinates. Define current angle (α), current step (n), total step (m), distance (d). X component (x) and Y component (y) can be calculated by:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">α&#x3D;n&#x2F;m*2*pi</span><br><span class="line"></span><br><span class="line">x&#x3D;d*sin(α)</span><br><span class="line"></span><br><span class="line">y&#x3D;d*cos(α)</span><br></pre></td></tr></table></figure><p>For example, if the current step is 256, total step is 512, distance measured is 200.00mm. Then,</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">α&#x3D;256&#x2F;512*2*pi&#x3D;pi</span><br><span class="line"></span><br><span class="line">x&#x3D;200.00*sin(pi)&#x3D;0</span><br><span class="line"></span><br><span class="line">y&#x3D;200.00*cos(pi)&#x3D;-200.00</span><br></pre></td></tr></table></figure><p>So the X component is 0 and the Y component is -200.00mm.</p><img src="https://s1.ax1x.com/2020/07/15/Ua76Qf.png" width = "300" height = "200" alt="" align=center /><h2 id="Circuit-Schematic"><a href="#Circuit-Schematic" class="headerlink" title="Circuit Schematic"></a>Circuit Schematic</h2><p><img src="https://s1.ax1x.com/2020/07/15/Ua7Reg.md.png" alt=""></p><h2 id="Logic-Flowchart"><a href="#Logic-Flowchart" class="headerlink" title="Logic Flowchart"></a>Logic Flowchart</h2><ul><li><p>Microcontroller<br><img src="https://s1.ax1x.com/2020/07/15/Ua7WwQ.md.jpg" alt=""></p></li><li><p>Python</p></li></ul><p><img src="https://s1.ax1x.com/2020/07/15/Ua7foj.md.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Project </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lidar, Pyhton, C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>创建sitemap站点地图并向Google站长工具提交</title>
       <link href="/2020/06/23/working-with-google-search-console/"/>
       <url>/2020/06/23/working-with-google-search-console/</url>
