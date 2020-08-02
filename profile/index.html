@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -20,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Alex Gu&#39;s Blog</title>
+  <title>Haochen Gu - Alex Gu&#39;s Blog</title>
   
 
   
@@ -103,7 +99,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover ' style="display: none;">
+    <cover class='cover page' style="display: none;">
       <div class='cover-body'>
   <div class='a'>
     
@@ -427,7 +423,7 @@
   
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量-->
@@ -439,7 +435,7 @@
   <div id="pjax-ispage">false</div>
   <div id="pjax-pageTitle"></div>
   <div id="pjax-enable-cover">true</div>
-  <div id="pjax-permalink"></div>
+  <div id="pjax-permalink">http://ghckodak.github.io/profile/</div>
   
   <div id="valine-path">none</div>
   <div id="valine-placeholder">none</div>
@@ -450,16 +446,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("docs" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none";
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("docs" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("docs" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -475,41 +471,10 @@
 
 <div class='l_main'>
   
-  <section class="post-list ">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
+
   
+    <article id="page" class="post white-box reveal blur article-type-page" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -519,395 +484,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2020/07/14/LidarSystem/">
-      LidarSystem
+  <h1 class="title">
+    <a href="/profile/">
+      Haochen Gu
     </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="https://ghckodak.github.io" rel="nofollow">
-    <img no-lazy src="https://s1.ax1x.com/2020/06/21/N1aHFf.md.jpg">
-    <p>Alex Gu</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/project/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>Project</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 14, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/07/14/LidarSystem/" class="leancloud_visitors" data-flag-title="LidarSystem">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/07/14/LidarSystem/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/07/14/LidarSystem/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>A Pyhton &amp; C Project</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/07/14/LidarSystem/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/06/23/working-with-google-search-console/">
-      创建sitemap站点地图并向Google站长工具提交
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="https://ghckodak.github.io" rel="nofollow">
-    <img no-lazy src="https://s1.ax1x.com/2020/06/21/N1aHFf.md.jpg">
-    <p>Alex Gu</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/website/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>website</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 23, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/06/23/working-with-google-search-console/" class="leancloud_visitors" data-flag-title="创建sitemap站点地图并向Google站长工具提交">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/06/23/working-with-google-search-console/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/06/23/working-with-google-search-console/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天把谷歌统计集成在网站里了，今天无意间发现还有一个谷歌站长工具。在上面提交网站后网站就能被谷歌抓取，从而搜索出来。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/06/23/working-with-google-search-console/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/06/16/markdown/">
-      Markdown备忘
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="https://ghckodak.github.io" rel="nofollow">
-    <img no-lazy src="https://s1.ax1x.com/2020/06/21/N1aHFf.md.jpg">
-    <p>Alex Gu</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/code/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>code</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 16, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/06/16/markdown/" class="leancloud_visitors" data-flag-title="Markdown备忘">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/06/16/markdown/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/06/16/markdown/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在这个静态博客框架里，页面使用Markdown语言。这篇文章可以作Markdown的参考，顺便测试以下这个博客。</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/06/16/markdown/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/06/15/hello-world/">
-      Hello World
-    </a>
-  </h2>
+  </h1>
 
 
         
@@ -935,45 +516,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 15, 2020</p>
+    <p>发布于：Jul 31, 2020</p>
   </a>
 </div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/06/15/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/06/15/hello-world/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/06/15/hello-world/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
 
             
           
@@ -991,162 +536,131 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/06/15/hello-world/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>Undergrduate student at McMaster University,</p>
+<p>Mac Robomaster Team Member</p>
+<p>Email: <a href="mailto:guh18@mcmaster.ca">guh18@mcmaster.ca</a></p>
+<hr>
+<p>I am a second year electrical engineering student at McMaster University. I have interested in embedded development and circuit design. I also have skills on programming and CAD.</p>
+<hr>
+<h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2><h3 id="Automatic-Lidar-Measurement-System"><a href="#Automatic-Lidar-Measurement-System" class="headerlink" title="Automatic Lidar Measurement System"></a>Automatic Lidar Measurement System</h3><p><a href="https://github.com/Ghckodak/LidarSystem" target="_blank" rel="noopener">[Code]</a><br><a href="">[Demo Video]</a></p>
+<p>The core components includes a MSP432 microcontroller, a IMU and a ToF. The system can be placed inside a room while it will do a 360-deg rotation to measure the data of the room. Open3D is used for visualizing the raw data (Point Cloud). </p>
+<h3 id="Easyhear"><a href="#Easyhear" class="headerlink" title="Easyhear"></a>Easyhear</h3><p><a href="https://github.com/Ghckodak/EasyHear" target="_blank" rel="noopener">[Code]</a></p>
+<p>It is a PC software using Microsoft Azure Speech-to-Text API to pick up voice from micphone and subtiltle the speech. The result will show on the screen as subtitle. The idea of this project is to help disabled students or students sitting back in the classroom.  </p>
+<h3 id="Distance-Warning-System"><a href="#Distance-Warning-System" class="headerlink" title="Distance Warning System"></a>Distance Warning System</h3><p>The system including an ultrasonic ranging sensor, a LCD display controlled by a Arduino. The distance is shown on the display and it will send alart based on three risk levels. The project is a simulation of a vechile reversing radar. </p>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
+          
+        </div>
         
           
-  <h2 class="title">
-    <a href="/2018/03/21/do_we_need_good_photography_equipment/">
-      Do we need expensive, professional equipment for photograph?
-    </a>
-  </h2>
 
 
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
         
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="https://ghckodak.github.io" rel="nofollow">
-    <img no-lazy src="https://s1.ax1x.com/2020/06/21/N1aHFf.md.jpg">
-    <p>Alex Gu</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/photography/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>photography</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-31T16:31:37-04:00">
   <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Mar 21, 2018</p>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 31, 2020</p>
   </a>
 </div>
 
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2018/03/21/do_we_need_good_photography_equipment/" class="leancloud_visitors" data-flag-title="Do we need expensive, professional equipment for photograph?">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2018/03/21/do_we_need_good_photography_equipment/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2018/03/21/do_we_need_good_photography_equipment/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
         
-          <hr>
+      
         
-      </div>
-    
-  </section>
+          
 
+        
+      
+        
+          
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
+        
       
-        <p>Many photograph lovers buy lots of professional equipment’s and spend lots of money on it. However, some photographers take fantastic photos only with old shooting camera. There is an argument of whether it is necessary to buy expensive equipment’s for photograph. My opinion is, we don’t need.</p>
-      
-    </div>
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <a class= "readmore" href="/2018/03/21/do_we_need_good_photography_equipment/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://ghckodak.github.io/profile/&title=Haochen Gu - Alex Gu's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" data-original="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
         </a>
       
     
-  </section>
-</article>
-
-          </div>
-        
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://ghckodak.github.io/profile/&title=Haochen Gu - Alex Gu's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" data-original="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
       
     
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://ghckodak.github.io/profile/&title=Haochen Gu - Alex Gu's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" data-original="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
   </section>
+
+
+        
+        
+      </section>
+    </article>
   
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
 
   
+    
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
 </div>
@@ -1226,70 +740,27 @@
   
 
   
-    
-    
-  
 
-  <section class="widget category blur desktop">
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='categories/'><i class="iconfont icon-fenlei fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/code/" href="/categories/code/"
-            id="categoriescode"
-            ><div class='name'>code</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/photography/" href="/categories/photography/"
-            id="categoriesphotography"
-            ><div class='name'>photography</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/project/" href="/categories/project/"
-            id="categoriesproject"
-            ><div class='name'>Project</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/website/" href="/categories/website/"
-            id="categorieswebsite"
-            ><div class='name'>website</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Projects"><span class="toc-text">Projects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Automatic-Lidar-Measurement-System"><span class="toc-text">Automatic Lidar Measurement System</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Easyhear"><span class="toc-text">Easyhear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Distance-Warning-System"><span class="toc-text">Distance Warning System</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud blur desktop mobile">
-    
-  <header>
-    
-      <a href='tags/'><i class="iconfont icon-Tag fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/lidar-pyhton-c/" style="font-size: 14px; color: #999">Lidar, Pyhton, C</a> <a href="/tags/markdown-note-test/" style="font-size: 14px; color: #999">markdown, note, test</a> <a href="/tags/photography/" style="font-size: 14px; color: #999">photography</a> <a href="/tags/sitemap-google-search-console/" style="font-size: 14px; color: #999">sitemap, google search console</a>
-    </div>
-  </section>
-
-
-  
 
   
 
